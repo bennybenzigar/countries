@@ -1,0 +1,55 @@
+<div class="container">
+
+    <!-- form -->
+    <div class="col-md-6 p-3 " style="display: flex;flex-direction: column;">
+        <h1 class="mt-4">sign In</h1>
+        <div style="display: flex;">
+            <p class="mt-2">New User?</p> <a href="" class="mt-2 ms-1" style="text-decoration: none;"> Create an
+                account</a>
+        </div>
+
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" style="display: flex;flex-direction: column;">
+
+
+
+            <input class="mb-4" type="email" id="email" placeholder="  Email" formControlName="email" />
+
+
+            <input class="mb-4" type="password" id="password" placeholder="  Password" formControlName="password" />
+
+            <label class="" style="display: flex;flex-direction: row;align-items: center;">
+                <input type="checkbox" formControlName="signin" />
+                keep me signed in
+            </label>
+
+            <button type="submit" class="btn" style="color: white;background-color: black;"
+                [disabled]="loginForm.invalid">Login</button>
+        </form>
+        <div style="display: flex;flex-direction: row;" class="mt-4">
+            <div class="col-3">
+                <hr >
+            </div>
+            <div class="col-6 text-center">
+                Or Sign in with
+            </div>
+            <div class="col-3">
+                <hr>
+            </div>
+        </div>
+
+        <div style="display: flex;flex-direction: row;" class="mt-4">
+            <div class="col-2"></div>
+         
+            <div class="col-2"><i class="fa-brands fs-4 fa-google"></i></div>
+            <div class="col-2"><i class="fa-brands fs-4 fa-facebook"></i></div>
+            <div class="col-2"><i class="fa-brands fs-4 fa-twitter"></i></div>
+            <div class="col-2"><i class="fa-brands fs-4 fa-linkedin"></i></div>
+            <div class="col-2"></div>
+        </div> 
+    </div>
+    <!-- image -->
+    <div class="col-md-6">
+        <img src="assets/image.png" alt=""  >
+    </div>
+</div>

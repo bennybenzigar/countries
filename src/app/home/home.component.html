@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="navbar" style="display:flex ;justify-content: space-between;">
+        <div>
+            <h5>Countries</h5>
+        </div>
+        <div>
+            <div>
+                <div class="btn btn-transparent" *ngFor="let countries of country" (click)="filter(countries)">
+                    {{countries}}
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div class="row ">
+        <div class="col-md-6 p-1" *ngFor="let datas of data">
+            <div class="card border border-dark">
+                <div class="row">
+
+                    <div class="col-2 m-1">
+                        <img src="{{datas.flag}}" class="img-fluid m-2" alt="" style="height: 70px;width:70px">
+                    </div>
+
+                    <div class="col-8 m-1" style="display:flex ;flex-direction: column;">
+                        <div>
+                            <h6>{{datas.name}}</h6>
+                        </div>
+                        <div>
+                            <p>{{datas.region}}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
